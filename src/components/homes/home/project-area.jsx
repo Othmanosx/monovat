@@ -21,7 +21,7 @@ const ProjectArea = () => {
 
   return (
     <div className="tp-project-area p-relative pt-130 pb-100">
-      <div className="tp-project-shape">
+      <div className="tp-project-shape" style={{ zIndex: 1 }}>
         <img src="assets/img/project/project-shape.png" alt="" />
       </div>
       <div className="container">

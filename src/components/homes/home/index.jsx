@@ -24,7 +24,7 @@ const Home = () => {
       {/* <BrandArea /> */}
       <ServicesArea />
       <ProjectArea />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <BlogArea />
       <NewsLetter />
       <Footer />
