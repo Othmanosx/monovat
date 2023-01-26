@@ -34,9 +34,9 @@ const hero_contents = {
     },
     {
       id: 4,
-      icon: "fab fa-behance social-icon-4",
-      title: "Behance",
-      link: "https://www.behance.net/",
+      icon: "fab fa-instagram social-icon-5",
+      title: "Instagram",
+      link: "https://www.instagram.net/",
     },
   ],
   hero_img: "/assets/img/hero/hero-1.png",

@@ -6,11 +6,9 @@ const services_data = [
     duration: ".5s",
     delay: ".8s",
     img: "/assets/img/service/service-x-1.png",
-    title: "Ideation & Evaluation",
+    title: "تدريبات تقنية ",
     text_1:
-      "At Collax we specialize in designing, building, shipping and scaling beautiful, usable products with blazing-fast",
-    text_2:
-      "At Collax we specialize in designing, building, shipping and scaling...",
+      "تدريبات لكوادر المختبرات والاطباء والممارسين حول كيفية استخدام وتشغيل الطابعات ثلاثية الابعاد وملحقاتها وبرامج التحكم الخاصة بها",
     home: true,
     service_p_2: true,
   },
@@ -18,12 +16,10 @@ const services_data = [
     id: 2,
     duration: ".7s",
     delay: "1s",
-    img: "/assets/img/service/service-2.png",
-    title: "Ideation & Evaluation",
+    img: "/assets/img/service/service-x-2.png",
+    title: "دعم فني",
     text_1:
-      "At Collax we specialize in designing, building, shipping and scaling beautiful, usable products with blazing-fast",
-    text_2:
-      "At Collax we specialize in designing, building, shipping and scaling...",
+      "دعم فني في صيانة ومعايرة الطابعات ثلاثية الابعاد وتشغيلها بالاضافة الى تصميم وتعديل التيجان والجسور وتقويم الاسنان ودليل الجراحة وموديلات اطقم الاسنان وغيرها من الملحقات مثل برامج  Exocad و Meshmixer",
     home: true,
     service_p_2: true,
   },
@@ -31,12 +27,10 @@ const services_data = [
     id: 3,
     duration: ".9s",
     delay: "1.2s",
-    img: "/assets/img/service/service-3.png",
-    title: "Online Marketing",
+    img: "/assets/img/service/service-x-3.png",
+    title: "خدمات طباعة",
     text_1:
-      "At Collax we specialize in designing, building, shipping and scaling beautiful, usable products with blazing-fast",
-    text_2:
-      "At Collax we specialize in designing, building, shipping and scaling...",
+      "نقوم بخدمات الطباعة ثلاثية الابعاد لمختبرات وعيادات الاسنان وعينات الدراسات والبحوث العلمية",
     home: true,
     service_p_2: true,
   },

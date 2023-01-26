@@ -36,9 +36,6 @@ const ServicesArea = () => {
             >
               <h5 className="tp-subtitle pb-10">{subtitle}</h5>
               <h2 className="tp-title">{title}</h2>
-              <Link href="/service-1">
-                <a className="tp-btn">{btn_text}</a>
-              </Link>
             </div>
           </div>
           {services_items.map((s, i) => (
