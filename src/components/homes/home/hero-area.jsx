@@ -39,7 +39,7 @@ const hero_contents = {
       link: "https://www.instagram.net/",
     },
   ],
-  hero_img: "/assets/img/hero/hero-1.png",
+  hero_img: "/assets/img/hero/hero-1.webp",
 }
 
 const { title, text, btn_text, btn_text_2, social_links, hero_img } =
