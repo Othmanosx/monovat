@@ -1,0 +1,64 @@
+@import "~bootstrap/scss/bootstrap";
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+@import "swiper/css/bundle";
+@import "react-toastify/dist/ReactToastify.css";
+@import "react-image-lightbox/style.css";
+@import "../../public/assets/scss/main.scss";
+@import "../../public/assets/scss/utils/rtl.scss";
+
+@-webkit-keyframes animateGradient {
+  0% {
+    background-position: left bottom;
+  }
+
+  50% {
+    background-position: right top;
+  }
+
+  100% {
+    background-position: left bottom;
+  }
+}
+
+@keyframes animateGradient {
+  0% {
+    background-position: left bottom;
+  }
+
+  50% {
+    background-position: right top;
+  }
+
+  100% {
+    background-position: left bottom;
+  }
+}
+
+.hero-img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 75.3rem;
+  height: 75.3rem;
+  border-radius: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #9341d4;
+  background: linear-gradient(45deg, #9341d4 0%, #d98efb 50%, #9341d4 100%);
+  background-size: 200% 200%;
+  background-position: left bottom;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  filter: drop-shadow(0px 30px 20px rgba(147, 65, 212, 0.4));
+  -webkit-filter: drop-shadow(0px 30px 20px rgba(147, 65, 212, 0.4));
+  -moz-filter: drop-shadow(0px 30px 20px rgba(147, 65, 212, 0.4));
+  -webkit-animation-name: animateGradient;
+  animation-name: animateGradient;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
