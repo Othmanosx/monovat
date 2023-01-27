@@ -77,7 +77,11 @@ const Footer = () => {
           data-wow-delay=".7s"
         >
           <div className="container">
-            <div className="tp-copyright-box align-items-center">
+            <div
+              className="tp-copyright-box align-items-center wow tpfadeUp"
+              data-wow-duration=".5s"
+              data-wow-delay=".5s"
+            >
               <div className="row align-items-center">
                 <div className="col-xl-5 col-lg-5 col-md-5 col-12">
                   <div className="tp-copyright-text z-index-1">
@@ -95,7 +99,11 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="tp-copyright-logo-box">
+            <div
+              data-wow-duration=".5s"
+              data-wow-delay=".7s"
+              className="tp-copyright-logo-box wow tpfadeUp"
+            >
               <div className="row align-items-center">
                 <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                   <div className="tp-copyright-logo mt-35">
