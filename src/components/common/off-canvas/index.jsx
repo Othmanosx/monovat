@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import React, { useState } from "react"
 import menu_data from "../../../layout/headers/menu-data"
@@ -25,12 +26,19 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
   }
   return (
     <>
-      <div className="tp-offcanvas-area">
+      <div className="tp-offcanvas-area" onClick={() => setIsOpen(false)}>
         <div className={`tpoffcanvas ${isOpen ? "opened" : ""}`}>
           <div className="tpoffcanvas__logo">
             <Link href="/">
-              <a>
-                <img src="/assets/img/logo/logo-white.png" alt="" />
+              <a className="d-flex justify-content-enter align-items-center">
+                <Image
+                  src="/assets/img/logo/monovat.png"
+                  alt=""
+                  style={{ filter: "contrast(0) brightness(1.5)" }}
+                  height={80}
+                  width={80}
+                  objectFit="cover"
+                />
               </a>
             </Link>
           </div>
@@ -78,7 +86,11 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                       ))}
                     </ul>
                     {!menu.has_dropdown && (
-                      <Link href={menu.link}>{menu.title}</Link>
+                      // <Link href={menu.link}>{menu.title}</Link>
+
+                      <Link href={menu.link}>
+                        <p className="tp-btn w-100">{menu.title}</p>
+                      </Link>
                     )}
                   </li>
                 ))}
@@ -89,47 +101,21 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             <span>Contact us</span>
             <ul>
               <li>
-                <i className="fas fa-star"></i>{" "}
-                <a
-                  href="https://goo.gl/maps/abHegV4AoiJA6Syd8"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Melbone st, Australia, Ny 12099
-                </a>
+                <i className="fas fa-star"></i> <p>العراق، موصل، اربيل</p>
               </li>
               <li>
                 <i className="fas fa-star"></i>
-                <a href="tel:8180012345678">+81 800 123 456 78</a>
+                <a href="https://instagram.com/mono_vat">mono_vat@</a>
               </li>
               <li>
                 <i className="fas fa-star"></i>
-                <a href="mailto:Collaxmail@gmail.com">Collaxmail@gmail.com</a>
+                <p>
+                  مختصين بتطوير قطاع صناعة الاسنان 🦷 (طابعات ثلاثية
+                  الابعاد-رزنات اسنان-ماسحات ضوئية-تدريبات-CAD/CAM-exocad) وكيل
+                  شركة شنرتك لرزنات الاسنان في العراق
+                </p>
               </li>
             </ul>
-          </div>
-          <div className="tpoffcanvas__input d-none d-sm-block">
-            <p>Get UPdate</p>
-            <form className="p-relative" action="#">
-              <input type="text" placeholder="Enter mail" />
-              <button type="submit">
-                <i className="fas fa-paper-plane"></i>
-              </button>
-            </form>
-          </div>
-          <div className="tpoffcanvas__instagram d-none d-sm-block">
-            <p>Check Instagram POst</p>
-            <div className="tp-insta">
-              <div className="row">
-                {inst_imgs.map((img, i) => (
-                  <div key={i} className="col-3 col-sm-3">
-                    <a href="#">
-                      <img src={img} alt="" />
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
