@@ -83,7 +83,8 @@
   }
 
   @media #{$xs} {
-    display: none;
+    height: 500px;
+    width: 500px;
   }
 }
 
@@ -319,7 +320,7 @@
     z-index: -1;
     & img {
       max-width: 400px;
-      margin-bottom: -150px;
+      margin-bottom: -100px;
     }
   }
 }
