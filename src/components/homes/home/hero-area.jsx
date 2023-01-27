@@ -47,7 +47,10 @@ const { title, text, btn_text, btn_text_2, social_links, hero_img } =
 
 const HeroArea = () => {
   return (
-    <div className="tp-hero-area tp-hero-space p-relative z-index-1 fix">
+    <div
+      id="home"
+      className="tp-hero-area tp-hero-space p-relative z-index-1 fix"
+    >
       <div className="tp-hero-shape">
         <div className="shape-circle-yellow d-none"></div>
         <div className="shape-circle-blue"></div>

@@ -44,8 +44,8 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: #9341d4;
-  background: linear-gradient(45deg, #9341d4 0%, #d98efb 50%, #9341d4 100%);
+  background: #a34a9c;
+  background: linear-gradient(45deg, #a34a9c 0%, #ef80e6 50%, #a34a9c 100%);
   background-size: 200% 200%;
   background-position: left bottom;
   -webkit-backface-visibility: hidden;
@@ -74,8 +74,8 @@
   z-index: -1;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: #9341d4;
-  background: linear-gradient(45deg, #9341d4 0%, #d98efb 50%, #9341d4 100%);
+  background: #a34a9c;
+  background: linear-gradient(45deg, #a34a9c 0%, #ef80e6 50%, #a34a9c 100%);
   background-size: 200% 200%;
   background-position: left bottom;
   -webkit-backface-visibility: hidden;
@@ -91,4 +91,11 @@
   animation-duration: 2.5s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+
+#contact,
+#home,
+#services,
+#products {
+  scroll-margin-top: 150px;
 }

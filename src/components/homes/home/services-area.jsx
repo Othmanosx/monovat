@@ -15,7 +15,10 @@ const services_items = services_data.filter((ser) => ser.home)
 
 const ServicesArea = () => {
   return (
-    <div className="tp-service-area pt-190 pb-100 grey-bg p-relative fix">
+    <div
+      id="services"
+      className="tp-service-area pt-190 pb-100 grey-bg p-relative fix"
+    >
       <div className="tp-sv-shape-img z-index-1">
         <img src={shape_img} alt="" />
       </div>

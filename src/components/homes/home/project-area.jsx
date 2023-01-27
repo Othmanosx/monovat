@@ -20,7 +20,7 @@ const ProjectArea = () => {
   const sm_items = portfolioItems.filter((i) => i.sm)
 
   return (
-    <div className="tp-project-area p-relative pt-130 pb-100">
+    <div id="products" className="tp-project-area p-relative pt-130 pb-100">
       <div className="tp-project-shape" style={{ zIndex: 1 }}>
         <img src="assets/img/project/project-shape.png" alt="" />
       </div>

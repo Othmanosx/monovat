@@ -1,33 +1,30 @@
 $colors: (
-    common: (
-        white: #ffffff,
-        black: #292930,
-        blue:#82CEFD,
-        pink:#FFADAD,
-        dpink:#FD346E,
-        paste:#1EE2CF,
-    ),
-    heading: (
-        primary: #292930,
-    ),
-    grey: (
-        1:#F7F8FD,
-        2:#f8f8f8,
-
-    ),
-    text: (
-        body:#8A90A2,
-        p:#8A90A2,
-    ),
-    theme: (
-        1: #5956E9,
-        2: #423EF3,
-        primary: #FFDC60,
-        secondary: #57c9da,
-
-    ),
-    border: (
-        1: #E8ECF2,
-    )
+  common: (
+    white: #ffffff,
+    black: #292930,
+    blue: #82cefd,
+    pink: #ffadad,
+    dpink: #fd346e,
+    paste: #1ee2cf,
+  ),
+  heading: (
+    primary: #292930,
+  ),
+  grey: (
+    1: #f7f8fd,
+    2: #f8f8f8,
+  ),
+  text: (
+    body: #8a90a2,
+    p: #8a90a2,
+  ),
+  theme: (
+    1: #bc59b4,
+    2: #be43b4,
+    primary: #ffdc60,
+    secondary: #57c9da,
+  ),
+  border: (
+    1: #e8ecf2,
+  ),
 );
-
