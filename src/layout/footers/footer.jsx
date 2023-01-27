@@ -1,24 +1,38 @@
-import Link from 'next/link';
-import React from 'react';
-import { ClipPath, UpArrow } from '../../svg';
+import Image from "next/image"
+import Link from "next/link"
+import React from "react"
+import { ClipPath, UpArrow } from "../../svg"
 
 const footer_contents = {
-  title: <>More than 10 years in the game and {"we're"} <br /> just getting started.🤝</>,
-  btn_text: 'Available for new Project',
-  copyRight_text: <>© {new Date().getFullYear()} Creative Agency , All Right Receved.</>,
-  conditions: ['Support', 'Privacy policy', 'Terms and conditions'],
-  logo: '/assets/img/copyright/copyright-logo.png',
-  social_links: ['fab fa-linkedin-in', 'fab fa-facebook-f', 'fab fa-instagram', 'fab fa-youtube']
+  title: (
+    <>
+      More than 10 years in the game and {"we're"} <br /> just getting
+      started.🤝
+    </>
+  ),
+  btn_text: "Available for new Project",
+  copyRight_text: <>© {new Date().getFullYear()} MonoVat جميع الحقوق محفوظة.</>,
+  conditions: ["Support", "Privacy policy", "Terms and conditions"],
+  logo: "/assets/img/copyright/copyright-logo.png",
+  social_links: [
+    // "fab fa-linkedin-in",
+    // "fab fa-facebook-f",
+    "fab fa-instagram",
+    // "fab fa-youtube",
+  ],
 }
 
-const { btn_text, conditions, copyRight_text, logo, social_links, title } = footer_contents;
+const { btn_text, conditions, copyRight_text, logo, social_links, title } =
+  footer_contents
 
 const Footer = () => {
   return (
     <footer className="p-relative">
       <button className="scrollTop d-none d-md-block" data-target="html">
-        <Link href={'/'}>
-          <div className="tp-backto-top"><UpArrow /></div>
+        <Link href={"/"}>
+          <div className="tp-backto-top">
+            <UpArrow />
+          </div>
         </Link>
       </button>
       <div className="footer-clip-shape">
@@ -33,8 +47,12 @@ const Footer = () => {
           <span className="tp-circle-3"></span>
         </div>
         <div className="container">
-          <div className="tp-footer-widget wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".5s">
-            <div className="row align-items-center">
+          <div
+            className="tp-footer-widget wow tpfadeUp"
+            data-wow-duration=".5s"
+            data-wow-delay=".5s"
+          >
+            {/* <div className="row align-items-center">
               <div className="col-xl-7 col-lg-7 col-md-7 col-12">
                 <div className="tp-footer-top">
                   <h5 className="tp-footer-title">{title}</h5>
@@ -43,14 +61,21 @@ const Footer = () => {
               <div className="col-xl-5 col-lg-5 col-md-5 col-12">
                 <div className="tp-footer-button text-end text-md-start">
                   <Link href="/contact">
-                    <a className="tp-btn">{btn_text}<i className="far fa-arrow-right"></i></a>
+                    <a className="tp-btn">
+                      {btn_text}
+                      <i className="far fa-arrow-right"></i>
+                    </a>
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="tp-copyright-area pb-90 wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">
+        <div
+          className="tp-copyright-area pb-90 wow tpfadeUp"
+          data-wow-duration=".5s"
+          data-wow-delay=".7s"
+        >
           <div className="container">
             <div className="tp-copyright-box align-items-center">
               <div className="row align-items-center">
@@ -61,7 +86,11 @@ const Footer = () => {
                 </div>
                 <div className="col-xl-7 col-lg-7 col-md-7 col-12">
                   <div className="tp-copyright-right text-md-start text-end">
-                    {conditions.map((c, i) => <a key={i} href="#">{c}</a>)}
+                    {conditions.map((c, i) => (
+                      <a key={i} href="#">
+                        {c}
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -71,14 +100,28 @@ const Footer = () => {
                 <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                   <div className="tp-copyright-logo mt-35">
                     <Link href="/">
-                      <a><img src={logo} alt="" /></a>
+                      <a className="d-flex justify-content-enter align-items-center">
+                        <h2 className="pt-2" style={{ fontWeight: 700 }}>
+                          MonoVat
+                        </h2>
+                        <Image
+                          src="/assets/img/logo/monovat.png"
+                          alt=""
+                          style={{ filter: "contrast(0) brightness(1.5)" }}
+                          height={80}
+                          width={80}
+                          objectFit="cover"
+                        />
+                      </a>
                     </Link>
                   </div>
                 </div>
                 <div className="col-xl-8 col-lg-8 col-md-8 col-12">
                   <div className="tp-copyright-social text-md-start mt-25">
                     {social_links.map((s, i) => (
-                      <a key={i} href="#"><i className={s}></i></a>
+                      <a key={i} href="#">
+                        <i className={s}></i>
+                      </a>
                     ))}
                   </div>
                 </div>
@@ -88,7 +131,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

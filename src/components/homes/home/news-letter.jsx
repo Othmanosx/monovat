@@ -1,8 +1,10 @@
+import { useRouter } from "next/router"
+
 const news_letter_contents = {
   bg_img: "/assets/img/news/news-shape.png",
-  subtitle: "Get update",
-  title: "Get latest updates and deals",
-  btn_text: "Subscribe",
+  subtitle: "تواصل معنا",
+  title: "انتقل معنا الى الخدمات الرقمية",
+  btn_text: "ارسل رسالة",
   news_l_img: "/assets/img/news/news-1.png",
   shape_img: "/assets/img/news/news-shape-2.png",
 }
@@ -11,6 +13,7 @@ const { bg_img, btn_text, news_l_img, shape_img, subtitle, title } =
   news_letter_contents
 
 const NewsLetter = () => {
+  const router = useRouter()
   return (
     <div
       id="contact"
@@ -38,15 +41,15 @@ const NewsLetter = () => {
                   <h2 className="tp-title tp-white-text">{title}</h2>
                 </div>
                 <div className="tp-news-button p-relative">
-                  <form onSubmit={(e) => e.preventDefault()}>
-                    <input type="text" placeholder="Enter your mail" />
-                    <button
-                      className="tp-submit-button tp-btn-yellow-semilar"
-                      type="submit"
-                    >
-                      {btn_text} <i className="far fa-arrow-right"></i>
-                    </button>
-                  </form>
+                  <button
+                    onClick={() =>
+                      router.push("https://www.instagram.com/mono_vat/")
+                    }
+                    className="tp-submit-button tp-btn-yellow-semilar"
+                    type="submit"
+                  >
+                    {btn_text} <i className="far fa-arrow-right"></i>
+                  </button>
                 </div>
               </div>
             </div>
