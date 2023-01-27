@@ -1,8 +1,10 @@
 @use "../utils" as *;
 
-button {
+a,
+.font-family {
   font-family: var(--tp-ff-heading);
 }
+
 .tp-btn {
   display: inline-block;
   font-size: 16px;

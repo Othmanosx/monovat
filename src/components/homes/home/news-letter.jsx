@@ -45,7 +45,7 @@ const NewsLetter = () => {
                     onClick={() =>
                       router.push("https://www.instagram.com/mono_vat/")
                     }
-                    className="tp-submit-button tp-btn-yellow-semilar"
+                    className="tp-submit-button tp-btn-yellow-semilar font-family"
                     type="submit"
                   >
                     {btn_text} <i className="far fa-arrow-right"></i>

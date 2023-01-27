@@ -18,7 +18,7 @@ const BlogArea = () => {
           <div className="col-xl-12" style={{ zIndex: 1 }}>
             <div className="tp-blog-section-box text-center pb-15">
               <h5 className="tp-subtitle">منشوراتنا</h5>
-              <h2 className="tp-title">اطلع على آخر الاخبار</h2>
+              <h2 className="tp-title">إطّلع على المزيد من المعلومات</h2>
             </div>
           </div>
         </div>
@@ -33,39 +33,38 @@ const BlogArea = () => {
               meta_tag,
               short_desc,
               title,
+              href,
             } = item
             return (
-              <div key={id} className="col-xl-6 col-lg-6">
-                <div
-                  className="tp-blog-box mb-30 wow tpfadeLeft"
-                  data-wow-duration={duration}
-                  data-wow-delay={delay}
-                >
-                  <div className="tp-blog-item">
-                    <div className="tp-blog-img fix mb-35">
-                      <Link href={`/blog-details/${id}`}>
+              <div key={id} className="col-xl-4">
+                <Link href={href}>
+                  <div
+                    className="tp-blog-box mb-30 wow tpfadeLeft"
+                    data-wow-duration={duration}
+                    data-wow-delay={delay}
+                  >
+                    <div className="tp-blog-item p-4">
+                      <div className="tp-blog-img fix mb-35">
                         <a>
                           {" "}
                           <img className="w-100" src={img} alt="" />
                         </a>
-                      </Link>
-                    </div>
-                    <div className="tp-blog-meta d-flex justify-content-between mb-30">
-                      <a href="#">{meta_tag}</a>
-                      <a className="tp-blog-meta-color" href="#">
-                        {date}
-                      </a>
-                    </div>
-                    <div className="tp-blog-info">
-                      <h3 className="tp-blog-title">
-                        <Link href={`/blog-details/${id}`}>
+                      </div>
+                      <div className="tp-blog-meta d-flex justify-content-between mb-30">
+                        <a href="#">{meta_tag}</a>
+                        <a className="tp-blog-meta-color" href="#">
+                          {date}
+                        </a>
+                      </div>
+                      <div className="tp-blog-info">
+                        <h3 className="tp-blog-title">
                           <a>{title}</a>
-                        </Link>
-                      </h3>
-                      <p>{short_desc}</p>
+                        </h3>
+                        <p className="text-clip mb-4">{short_desc}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             )
           })}
@@ -73,8 +72,8 @@ const BlogArea = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="tp-blog-button text-center mt-30">
-              <Link href={"/blog"}>
-                <a className="tp-btn">View All Blog</a>
+              <Link href={"https://www.instagram.com/mono_vat/"}>
+                <a className="tp-btn">المزيد</a>
               </Link>
             </div>
           </div>

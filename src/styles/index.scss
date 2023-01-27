@@ -99,3 +99,10 @@
 #products {
   scroll-margin-top: 150px;
 }
+
+.text-clip {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

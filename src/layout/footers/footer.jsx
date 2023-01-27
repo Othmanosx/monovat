@@ -16,8 +16,14 @@ const footer_contents = {
   logo: "/assets/img/copyright/copyright-logo.png",
   social_links: [
     // "fab fa-linkedin-in",
-    // "fab fa-facebook-f",
-    "fab fa-instagram",
+    {
+      className: "fab fa-facebook-f",
+      href: "https://www.facebook.com/profile.php?id=100088127301992",
+    },
+    {
+      className: "fab fa-instagram",
+      href: "https://www.instagram.com/mono_vat/",
+    },
     // "fab fa-youtube",
   ],
 }
@@ -127,8 +133,8 @@ const Footer = () => {
                 <div className="col-xl-8 col-lg-8 col-md-8 col-12">
                   <div className="tp-copyright-social text-md-start mt-25">
                     {social_links.map((s, i) => (
-                      <a key={i} href="#">
-                        <i className={s}></i>
+                      <a key={i} href={s.href}>
+                        <i className={s.className}></i>
                       </a>
                     ))}
                   </div>
