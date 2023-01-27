@@ -98,7 +98,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             </div>
           </div>
           <div className="tpoffcanvas__contact">
-            <span>Contact us</span>
+            <p>تواصل معنا</p>
             <ul>
               <li>
                 <i className="fas fa-star"></i> <p>العراق، موصل، اربيل</p>
