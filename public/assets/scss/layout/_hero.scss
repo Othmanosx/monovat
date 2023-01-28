@@ -78,11 +78,17 @@
   }
 
   @media #{$sm} {
+    filter: unset;
+    -webkit-filter: unset;
+    -moz-filter: unset;
     height: 500px;
     width: 500px;
   }
 
   @media #{$xs} {
+    filter: unset;
+    -webkit-filter: unset;
+    -moz-filter: unset;
     height: 500px;
     width: 500px;
   }
