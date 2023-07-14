@@ -1,23 +1,23 @@
-import Link from "next/link"
-import React from "react"
-import { portfolio_data } from "../../../data"
+import Link from "next/link";
+import React from "react";
+import { portfolio_data } from "../../../data";
 
 const ProjectArea = () => {
-  const [category, setCategory] = React.useState("Website Design")
-  const items = portfolio_data.filter((p) => p.home)
+  const [category, setCategory] = React.useState("Website Design");
+  const items = portfolio_data.filter((p) => p.home);
   const [portfolioItems, setPortfolioItems] = React.useState(
     items.filter((i) => i.category === category)
-  )
-  const categories = [...new Set(items.map((p) => p.category))]
+  );
+  const categories = [...new Set(items.map((p) => p.category))];
 
   const handleCategory = (c) => {
-    setCategory(c)
-    const new_items = items.filter((i) => i.category === c)
-    setPortfolioItems(new_items)
-  }
+    setCategory(c);
+    const new_items = items.filter((i) => i.category === c);
+    setPortfolioItems(new_items);
+  };
 
-  const bigItems = portfolioItems.filter((i) => i.big)
-  const sm_items = portfolioItems.filter((i) => i.sm)
+  const bigItems = portfolioItems.filter((i) => i.big);
+  const sm_items = portfolioItems.filter((i) => i.sm);
 
   return (
     <div id="products" className="tp-project-area p-relative pt-130 pb-100">
@@ -37,7 +37,7 @@ const ProjectArea = () => {
         <div className="project-tab-main">
           <div className="row gx-1">
             {bigItems.map((item) => (
-              <div key={item.id} className="col-xl-5 col-lg-12">
+              <div key={item.id} className="col-xl-6 col-lg-12">
                 <div className="tp-project-box mb-20">
                   <div className="tp-project-img fix mb-3">
                     <img className="w-100" src={item.img} alt="" />
@@ -54,10 +54,10 @@ const ProjectArea = () => {
                 </div>
               </div>
             ))}
-            <div className="col-xl-7 col-lg-12">
+            <div className="col-xl-12 col-lg-12">
               <div className="row">
                 {sm_items.map((item) => (
-                  <div key={item.id} className=" col-xl-12 col-lg-12">
+                  <div key={item.id} className="col-xl-6 col-lg-12">
                     <div className="tp-project-box-sm d-flex align-items-center mb-20">
                       <div className="tp-project-sm-img fix ml-25 mr-35">
                         <img src={item.img} alt="" />
@@ -69,18 +69,40 @@ const ProjectArea = () => {
                         >
                           {item.title}
                         </h3>
-                        <p>{item.sm_text}</p>
+                        <p style={{ paddingLeft: "1rem" }}>{item.sm_text}</p>
+                        <div style={{ display: "flex" }}>
+                          <a
+                            class="tp-btn-sm"
+                            style={{ marginRight: "auto", marginLeft: "2rem" }}
+                            href="#"
+                          >
+                            عرض <i class="far fa-arrow-left"></i>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))}
+                <div class="row">
+                  <div class="col-xl-12">
+                    <div class="tp-blog-button text-center mt-30">
+                      <a class="tp-btn" href="#">
+                        جميع المنتجات
+                        <i
+                          style={{ transform: "rotateY(180deg)" }}
+                          class="fas fa-external-link-alt pe-0 me-2"
+                        ></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectArea
+export default ProjectArea;

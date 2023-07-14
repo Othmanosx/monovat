@@ -1,6 +1,6 @@
-import Link from "next/link"
-import React from "react"
-import menu_data from "./menu-data"
+import Link from "next/link";
+import React from "react";
+import menu_data from "./menu-data";
 
 const NavMenus = () => {
   return (
@@ -20,7 +20,7 @@ const NavMenus = () => {
             </a>
           </Link>
           {menu.has_dropdown && (
-            <ul className="submenu text-start">
+            <ul className="submenu text-start" style={{ borderRadius: "1rem" }}>
               {menu.sub_menus.map((sub_m, i) => (
                 <li key={i}>
                   <Link href={sub_m.link}>
@@ -33,7 +33,7 @@ const NavMenus = () => {
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default NavMenus
+export default NavMenus;

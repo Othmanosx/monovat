@@ -1,4 +1,4 @@
-import { Bulb, Code, Managed } from "../svg"
+import { Bulb, Code, Managed } from "../svg";
 
 const services_data = [
   {
@@ -8,7 +8,7 @@ const services_data = [
     img: "/assets/img/service/service-x-1.webp",
     title: "تدريبات تقنية ",
     text_1:
-      "تدريبات لكوادر المختبرات والاطباء والممارسين حول كيفية استخدام وتشغيل الطابعات ثلاثية الابعاد وملحقاتها وبرامج التحكم الخاصة بها",
+      "تدريبات طباعة ثلاثية الابعاد لكوادر المختبرات والاطباء والممارسين حول كيفية استخدام وتشغيل الطابعات ثلاثية الابعاد وملحقاتها وبرامج التحكم الخاصة بها كبرنامج الاكزوكاد مع ثلاث مستويات تدريبية",
     home: true,
     service_p_2: true,
   },
@@ -30,7 +30,7 @@ const services_data = [
     img: "/assets/img/service/service-x-3.webp",
     title: "خدمات طباعة",
     text_1:
-      "نقوم بخدمات الطباعة ثلاثية الابعاد لمختبرات وعيادات الاسنان وعينات الدراسات والبحوث العلمية",
+      "توفير رزن طبي خاص بصناعة الاسنان و طابعات رزن ثلاثية الابعاد بالاضافة الى خدمات الطباعة ثلاثية الابعاد لمختبرات وعيادات الاسنان وعينات الدراسات والبحوث العلمية",
     home: true,
     service_p_2: true,
   },
@@ -386,6 +386,6 @@ const services_data = [
       "At Collax we specialize in designing, building, shipping and scaling beautiful, usable products with blazing-fast",
     service_p_4: true,
   },
-]
+];
 
-export default services_data
+export default services_data;

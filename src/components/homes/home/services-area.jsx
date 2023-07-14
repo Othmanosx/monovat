@@ -1,17 +1,17 @@
-import Link from "next/link"
-import React from "react"
-import { services_data } from "../../../data"
-import SingleServiceTwo from "../../common/single-service-2"
+import Link from "next/link";
+import React from "react";
+import { services_data } from "../../../data";
+import SingleServiceTwo from "../../common/single-service-2";
 
 const services_contents = {
   shape_img: "/assets/img/service/service-shape.png",
   subtitle: "خدماتنا",
   title: "خبراء في الطابعات ثلاثية الابعاد",
   btn_text: "View All Services",
-}
+};
 
-const { shape_img, title, subtitle, btn_text } = services_contents
-const services_items = services_data.filter((ser) => ser.home)
+const { shape_img, title, subtitle, btn_text } = services_contents;
+const services_items = services_data.filter((ser) => ser.home);
 
 const ServicesArea = () => {
   return (
@@ -47,7 +47,7 @@ const ServicesArea = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ServicesArea
+export default ServicesArea;

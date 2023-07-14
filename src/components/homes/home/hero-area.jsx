@@ -1,16 +1,7 @@
-import Link from "next/link"
-import React from "react"
+import Link from "next/link";
+import React from "react";
 
 const hero_contents = {
-  title: "مختصين بتطوير\nقطاع صناعة الاسنان",
-  text: (
-    <>
-      نساعد في تنمية وتطوير مختبرات صناعة الاسنان عن طريق تقنية الطباعة ثلاثية
-      الابعاد، حيث نوفر طابعات ثلاثية الابعاد، مواد طباعة ثلاثية الابعاد خاصة
-      بصناعة الاسنان، تدريبات للمختصين، صيانة وتشغيل الطابعات ثلاثية الابعاد،
-      بالاضافة الى خدمات طباعة ثلاثية الابعاد بمجال صناعة الاسنان
-    </>
-  ),
   btn_text: "تعرف على منتجاتنا",
   btn_text_2: "اتصل بنا",
   social_links: [
@@ -40,10 +31,10 @@ const hero_contents = {
     },
   ],
   hero_img: "/assets/img/hero/hero-1.webp",
-}
+};
 
 const { title, text, btn_text, btn_text_2, social_links, hero_img } =
-  hero_contents
+  hero_contents;
 
 const HeroArea = () => {
   return (
@@ -69,14 +60,30 @@ const HeroArea = () => {
                     data-wow-duration=".3s"
                     data-wow-delay=".6s"
                   >
-                    {title}
+                    مختصين بتطوير قطاع صناعة الاسنان
                   </h2>
-                  <p
+                  <h3
                     className="wow tpfadeUp"
                     data-wow-duration=".5s"
                     data-wow-delay=".8s"
                   >
-                    {text}
+                    نساعدك كي تكون الافضل في مجال صناعة الاسنان وملحقاتها عن
+                    طريق طباعة الرزن ثلاثية الأبعاد
+                  </h3>
+                  <p
+                    className="wow tpfadeUp"
+                    data-wow-duration=".6s"
+                    data-wow-delay=".9s"
+                  >
+                    <ul>
+                      <li>
+                        الوكيل الرسمي والحصري لرزنات شنرتك الخاصة بصناعة الاسنان
+                        وملحقاتها
+                      </li>
+                      <li>
+                        وكالة طابعات فروزن ثلاثية الابعاد بالتعاون مع كيورتك
+                      </li>
+                    </ul>
                   </p>
                   <div
                     className="tp-hero-button mb-140 wow tpfadeUp"
@@ -129,7 +136,7 @@ const HeroArea = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroArea
+export default HeroArea;

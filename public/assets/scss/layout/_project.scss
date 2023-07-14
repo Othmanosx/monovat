@@ -166,7 +166,7 @@
 
 .tp-project-box-sm {
   background-color: #f7f8fd;
-  padding: 43px 0;
+  padding: 22px 0;
   border-radius: 20px;
   @media #{$xl} {
     padding: 32px 0;
@@ -205,6 +205,8 @@
     width: 100%;
     transform: scale(1);
     transition: 1s;
+    aspect-ratio: 1;
+    object-fit: cover;
   }
 }
 .tp-service-tab button:hover,

@@ -4,19 +4,19 @@ const portfolio_data = [
   {
     id: 1,
     img: "/assets/img/project/project-1x.png",
-    title: "رزنات اسنان",
+    title: "رزن شنرتك",
     sm_text:
-      "رزنات اسنان متوافقة حيوياً خاصة بصناعة الاسنان وملحقاتها مثل صناعة الاسنان الدائمة والمؤقتة ودليل الجراحة وتقويم الاسنان الشفاف وموديلات الاسنان واللثة وغيرها",
+      "رزن تعويضات دائمية يمكن استخدامه كبديل للزاركون او السيراميك في صناعة التيجان, الجسور, تيجان الاطقم المتحركة والثابته onlay, inlay, Hollywood smile , Snap On Smile",
     category: "Website Design",
-    big: true,
+    sm: true,
     home: true,
   },
   {
     id: 2,
     img: "/assets/img/project/project-2x.png",
-    title: "طابعات 3D",
+    title: "طابعات فروزن",
     sm_text:
-      "طابعات رزن ثلاثية الابعاد من خلالها يمكن لمختبرات وممارسين واطباء الاسنان صناعة تعويضات الاسنان وملحقاتها",
+      "طابعات رزن ثلاثية الابعاد تايوانية الصنع  و بدقة 4K ذات جودة عالية مع ضمان لمدة سنة من خلالها يمكن لمختبرات وممارسين واطباء الاسنان صناعة تعويضات الاسنان وملحقاتها",
     category: "Website Design",
     sm: true,
     home: true,
@@ -24,7 +24,17 @@ const portfolio_data = [
   {
     id: 3,
     img: "/assets/img/project/project-3x.jpg",
-    title: "ماسحات ضوئية",
+    title: "التراسونك كلينر",
+    sm_text:
+      "ماسحات ضوئية ثلاثية الابعاد خاصة بتصوير وانشاء (تصميم) او موديل رقمي لاسنان المريض يمكن التعديل عليه باستخدام الكومبيوتر",
+    category: "Website Design",
+    sm: true,
+    home: true,
+  },
+  {
+    id: 4,
+    img: "/assets/img/project/exocad.webp",
+    title: "برنامج الاكزوكاد",
     sm_text:
       "ماسحات ضوئية ثلاثية الابعاد خاصة بتصوير وانشاء (تصميم) او موديل رقمي لاسنان المريض يمكن التعديل عليه باستخدام الكومبيوتر",
     category: "Website Design",
@@ -487,6 +497,6 @@ const portfolio_data = [
     delay: ".9s",
     service_p: true,
   },
-]
+];
 
-export default portfolio_data
+export default portfolio_data;
