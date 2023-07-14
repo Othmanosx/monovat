@@ -1,7 +1,7 @@
 const blog_data = [
   {
     id: 1,
-    img: "https://instagram.febl5-2.fna.fbcdn.net/v/t39.30808-6/324019207_878395726810044_4928932100099661640_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.febl5-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=9fa6lMXvt8gAX9_2Mgd&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzAwOTE5NTM2MDUzMTA4ODcwNg%3D%3D.2-ccb7-5&oh=00_AfAfr-7Wham0-6HVSWVnvr5Pr-zbtLEU_68MKGKRCrvxfw&oe=63D8E5E5&_nc_sid=1527a3",
+    img: "/assets/img/about/monovat-1.jpg",
     meta_tag: "اسئلة",
     date: "January. 5.2023",
     author: "NAIM",
@@ -17,7 +17,7 @@ const blog_data = [
   },
   {
     id: 2,
-    img: "https://instagram.febl5-1.fna.fbcdn.net/v/t39.30808-6/321889042_873571150432400_4930053357861634538_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.febl5-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=vdrPI9qe2XIAX8XIN3l&tn=PeO1z2LT09nf6poX&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzAxMDYwNDYxMDMwMTI0MDAwOQ%3D%3D.2-ccb7-5&oh=00_AfBP0MTN6OJj7-EKS6Q1AzC57iU0ojWitHQhsNFJBgpmvw&oe=63D8E0DC&_nc_sid=1527a3",
+    img: "/assets/img/about/monovat-2.jpg",
     meta_tag: "اسئلة",
     date: "January. 7.2023",
     author: "Mamun",
@@ -33,7 +33,7 @@ const blog_data = [
   },
   {
     id: 3,
-    img: "https://instagram.febl5-2.fna.fbcdn.net/v/t39.30808-6/323885356_493233702952555_7798330300950646558_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.febl5-2.fna.fbcdn.net&_nc_cat=107&_nc_ohc=n3ROR-7lYXQAX895Mov&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzAwOTkwMTE0NTU0MzQ5ODM1Mw%3D%3D.2-ccb7-5&oh=00_AfBJBIXdWK8I9iEoWrE2WzHV7yqhDRpauFECwGXANH0tyQ&oe=63D993B8&_nc_sid=1527a3",
+    img: "/assets/img/about/monovat-3.jpg",
     meta_tag: "اسئلة",
     date: "January. 6.2023",
     author: "UDDIN",
@@ -322,6 +322,6 @@ const blog_data = [
       "Laboratories used for scientific research take many forms because of the differing requirements of specialists in the various fields of science and engineering. A physics laboratory",
     blog_page: true,
   },
-]
+];
 
-export default blog_data
+export default blog_data;
