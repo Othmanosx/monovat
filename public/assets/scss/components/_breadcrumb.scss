@@ -36,7 +36,7 @@
 .breadcrumb__area {
     @media #{$xl} {
         background-size: cover;
-        background-position: right;
+        background-position: left;
     }
     @media #{$lg,$md,$xs} {
         background-size: cover;

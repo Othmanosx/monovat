@@ -25,7 +25,11 @@ const ProjectArea = () => {
         <img src="assets/img/project/project-shape.png" alt="" />
       </div>
       <div className="container">
-        <div className="row align-items-center mb-15">
+        <div
+          className="row align-items-center mb-15 wow tpfadeUp"
+          data-wow-duration={`.4s`}
+          data-wow-delay={`.1s`}
+        >
           <div className="col-xl-5 col-lg-12 col-md-12">
             <div className="tp-project-section-box">
               <h5 className="tp-subtitle">منتجاتنا</h5>
@@ -55,9 +59,14 @@ const ProjectArea = () => {
               </div>
             ))}
             <div className="col-xl-12 col-lg-12">
-              <div className="row">
-                {sm_items.map((item) => (
-                  <div key={item.id} className="col-xl-6 col-lg-12">
+              <div className="row ">
+                {sm_items.map((item, i) => (
+                  <div
+                    data-wow-duration={`.4s`}
+                    data-wow-delay={`.${2 + i * 2}s`}
+                    key={item.id}
+                    className="col-xl-6 col-lg-12 wow tpfadeUp"
+                  >
                     <div className="tp-project-box-sm d-flex align-items-center mb-20">
                       <div className="tp-project-sm-img fix ml-25 mr-35">
                         <img src={item.img} alt="" />
