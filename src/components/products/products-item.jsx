@@ -11,8 +11,10 @@ import {
   add_wishlist,
   get_wishlist_products,
 } from "../../redux/features/wishlist-slice";
+import { useRouter } from "next/router";
 
 const ProductsItem = ({ itemsPerPage, items }) => {
+  const router = useRouter();
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
@@ -83,21 +85,10 @@ const ProductsItem = ({ itemsPerPage, items }) => {
                 >
                   <img className="w-100" src={img} alt="" />
                   <div className="tp-product-icon">
-                    <button onClick={() => handleAddProduct(item)}>
-                      <i
-                        className={
-                          isCartSelected
-                            ? "fas fa-check"
-                            : "fal fa-shopping-basket"
-                        }
-                      ></i>
-                    </button>
-                    <button onClick={() => handleWishlist(item)}>
-                      <i
-                        className={
-                          isWishlistSelected ? "fas fa-heart" : "fal fa-heart"
-                        }
-                      ></i>
+                    <button
+                      onClick={() => router.push(`/product-details/${id}`)}
+                    >
+                      <i className={"fas fa-external-link-alt"}></i>
                     </button>
                   </div>
                 </div>

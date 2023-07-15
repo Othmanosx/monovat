@@ -3,11 +3,28 @@ module.exports = [
     id:1,
     img:'/assets/img/product/product-2.jpg',
     title:'Jeff Gothelf learn UX',
-    price:'46.00',
     sm_desc:'Rorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
     customer_reviews:5,
     rating:4,
-    old_price:'76.00',
+    price:46,
+    old_price:75,
+    prices:[
+      {
+        name:'0.25kg',
+        price:160,
+        old_price:200,
+      },
+      {
+        name:'0.5kg',
+        price:300,
+        old_price:350,
+      },
+      {
+        name:'1kg',
+        price:600,
+        old_price:750,
+      }
+    ],
     category:'book',
     models:['TYK','FFD3','23TT','R454','45HY'],
     details_text_1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate vestibulum Phasellus rhoncus, dolor eget viverra pretium, dolor tellus aliquet nunc, vitae ultricies erat elit eu lacus. Vestibulum non justo consectetur, cursus ante, tincidunt sapien. Nulla quis diam sit amet turpis interdum accumsan quis nec enim. Vivamus faucibus ex sed nibh egestas elementum. Mauris et bibendum dui. Aenean consequat pulvinar luctus. Suspendisse consectetur tristique tortor",
