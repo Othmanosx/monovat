@@ -8,7 +8,9 @@ const MobileMenu = ({ logo, bg, transparent = true }) => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
   return (
     <React.Fragment>
-      {headerSticky && <div style={{ height: 160 }}></div>}
+      {headerSticky && (
+        <div className="d-lg-none" style={{ height: 160 }}></div>
+      )}
       <div
         id="header-sticky-mobile"
         className={`tp-md-menu ${
