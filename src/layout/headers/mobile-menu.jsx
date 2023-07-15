@@ -1,13 +1,14 @@
-import React from "react"
-import useSticky from "../../hooks/use-sticky"
-import Sidebar from "../../components/common/off-canvas"
-import Image from "next/image"
+import React from "react";
+import useSticky from "../../hooks/use-sticky";
+import Sidebar from "../../components/common/off-canvas";
+import Image from "next/image";
 
 const MobileMenu = ({ logo, bg, transparent = true }) => {
-  const { headerSticky } = useSticky()
-  const [sidebarOpen, setSidebarOpen] = React.useState(false)
+  const { headerSticky } = useSticky();
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
   return (
     <React.Fragment>
+      {headerSticky && <div style={{ height: 160 }}></div>}
       <div
         id="header-sticky-mobile"
         className={`tp-md-menu ${
@@ -51,7 +52,7 @@ const MobileMenu = ({ logo, bg, transparent = true }) => {
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
       {/* off canvas end */}
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default MobileMenu
+export default MobileMenu;
