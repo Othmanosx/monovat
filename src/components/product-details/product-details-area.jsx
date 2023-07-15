@@ -25,7 +25,7 @@ const ProductDetailsArea = ({ product }) => {
   } = product || {};
   const dispatch = useDispatch();
   const [select, setSelect] = useState(prices?.[0]?.name);
-  const selectedPrice = prices.find((item) => item.name === select);
+  const selectedPrice = prices?.find((item) => item.name === select);
   const [reviewValue, setReviewValue] = useState(0);
   // reviews
   const { reviews } = useSelector((state) => state.products);
@@ -57,30 +57,32 @@ const ProductDetailsArea = ({ product }) => {
                     readonly
                   /> */}
                   {/* <span>({customer_reviews} customer review)</span> */}
-                  <label for="slct">
-                    <select
-                      className="select"
-                      id="slct"
-                      required="required"
-                      defaultValue={prices[0].name}
-                      value={select}
-                      onChange={(e) => setSelect(e.target.value)}
-                    >
-                      <option value="" disabled="disabled">
-                        اختر
-                      </option>
-                      {prices?.map((item) => (
-                        <option key={item.name} value={item.name}>
-                          {item.name}
+                  {prices && (
+                    <label for="slct">
+                      <select
+                        className="select"
+                        id="slct"
+                        required="required"
+                        defaultValue={prices?.[0].name}
+                        value={select}
+                        onChange={(e) => setSelect(e.target.value)}
+                      >
+                        <option value="" disabled="disabled">
+                          اختر
                         </option>
-                      ))}
-                    </select>
-                  </label>
+                        {prices?.map((item) => (
+                          <option key={item.name} value={item.name}>
+                            {item.name}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  )}
                   {prices ? (
                     <h4>
-                      ${selectedPrice.price}{" "}
-                      {selectedPrice.old_price && (
-                        <del>${selectedPrice.old_price}</del>
+                      ${selectedPrice?.price}{" "}
+                      {selectedPrice?.old_price && (
+                        <del>${selectedPrice?.old_price}</del>
                       )}
                     </h4>
                   ) : (
@@ -358,7 +360,7 @@ const ProductDetailsArea = ({ product }) => {
       </div>
 
       {/* related products start */}
-      <RelatedProducts category={category} title={title} />
+      {/* <RelatedProducts category={category} title={title} /> */}
       {/* related products end */}
     </>
   );

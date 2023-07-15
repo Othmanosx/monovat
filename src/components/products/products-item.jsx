@@ -68,7 +68,8 @@ const ProductsItem = ({ itemsPerPage, items }) => {
     <>
       {currentItems &&
         currentItems.map((item) => {
-          const { id, duration, delay, img, title, price, rating } = item;
+          const { id, duration, delay, img, title, price, prices, rating } =
+            item;
           const isCartSelected = cart_products.find((i) => i.id === id);
           const isWishlistSelected = wishlists.find((w) => w.id === id);
           return (
@@ -98,7 +99,7 @@ const ProductsItem = ({ itemsPerPage, items }) => {
                       <a>{title}</a>
                     </Link>
                   </h4>
-                  <span>${price}</span>
+                  <span>${prices?.[0]?.price ?? price}</span>
                   <div className="product-rating">
                     <Rating
                       fullSymbol={<i className="fas fa-star"></i>}

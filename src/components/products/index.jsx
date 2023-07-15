@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
-import { FooterThree, HeaderSix, Wrapper } from '../../layout';
-import { animationCreate } from '../../utils/utils';
-import Breadcrumb from '../common/breadcrumb/breadcrumb';
-import ProductsArea from './product-area';
-
+import React, { useEffect } from "react";
+import { HeaderSix, Wrapper, Footer } from "../../layout";
+import { animationCreate } from "../../utils/utils";
+import Breadcrumb from "../common/breadcrumb/breadcrumb";
+import ProductsArea from "./product-area";
 
 const Products = () => {
   useEffect(() => {
@@ -15,9 +14,9 @@ const Products = () => {
   return (
     <Wrapper>
       <HeaderSix />
-      <Breadcrumb title={'Collax Product'} />
-      <ProductsArea/>
-      <FooterThree />
+      <Breadcrumb title={"جميع المنتجات"} />
+      <ProductsArea />
+      <Footer />
     </Wrapper>
   );
 };

@@ -89,7 +89,7 @@ const HeroArea = () => {
                     <Link href="#products">
                       <a className="tp-btn mr-30">{btn_text}</a>
                     </Link>
-                    <Link href="/about-me">
+                    <Link href="#contact">
                       <a className="tp-btn-grey">
                         {btn_text_2}
                         <i className="far fa-arrow-left"></i>

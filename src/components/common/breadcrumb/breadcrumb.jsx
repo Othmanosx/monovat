@@ -19,13 +19,6 @@ const Breadcrumb = ({ title, back_home = false }) => {
             <div className="col-xxl-12">
               <div className="breadcrumb__content p-relative z-index-1">
                 <h3 className="breadcrumb__title">{title}</h3>
-                {!back_home && (
-                  <Link href="/contact">
-                    <a className="tp-btn-white-border">
-                      Lets work together <i className="far fa-arrow-right"></i>
-                    </a>
-                  </Link>
-                )}
                 {back_home && (
                   <Link href="/">
                     <a className="tp-btn-white-border">
