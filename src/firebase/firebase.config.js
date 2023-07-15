@@ -1,10 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyC6q63VgF5ikfKJCDajmC-aFvzpEh6dBJU",
-  authDomain: "collax-cf6be.firebaseapp.com",
-  projectId: "collax-cf6be",
-  storageBucket: "collax-cf6be.appspot.com",
-  messagingSenderId: "266530521253",
-  appId: "1:266530521253:web:95c0f3fe64f27eedb20d4c"
+  apiKey: "AIzaSyAZR8NRujY6cXEQ0iFNv7wNalstx0fxh2E",
+  authDomain: "monovat-35adf.firebaseapp.com",
+  projectId: "monovat-35adf",
+  storageBucket: "monovat-35adf.appspot.com",
+  messagingSenderId: "697013993364",
+  appId: "1:697013993364:web:0b6cd652715c08c2615981",
+  measurementId: "G-FJ5Q29LFPK"
 };
 
 export default firebaseConfig;
