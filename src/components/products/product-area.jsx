@@ -6,6 +6,7 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import firebaseInitialization from "../../firebase/firebase.init";
 import Tabs from "../Tabs";
 import { useRouter } from "next/router";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const db = firebaseInitialization();
 
@@ -13,6 +14,7 @@ const product_items = productsData;
 
 const ProductsArea = () => {
   const router = useRouter();
+  const [animationParent] = useAutoAnimate();
   const { filter } = router.query;
   const [active, setActive] = useState(filter || "all");
   useEffect(() => {
@@ -34,7 +36,7 @@ const ProductsArea = () => {
       <div className="tp-product-area pt-30 pb-130">
         <Tabs active={active} setActive={setActive} />
         <div className="container">
-          <div className="row">
+          <div className="row" ref={animationParent}>
             <ProductsItem
               itemsPerPage={8}
               items={loading || error ? product_items : products}
