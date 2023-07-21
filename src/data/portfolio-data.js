@@ -10,6 +10,7 @@ const portfolio_data = [
     category: "Website Design",
     sm: true,
     home: true,
+    link: "/product?filter=resin",
   },
   {
     id: 2,
@@ -20,16 +21,18 @@ const portfolio_data = [
     category: "Website Design",
     sm: true,
     home: true,
+    link: "/product?filter=printer",
   },
   {
     id: 3,
-    img: "/assets/img/project/project-3x.jpg",
+    img: "/assets/img/project/cleaner.webp",
     title: "التراسونك كلينر",
     sm_text:
       "ماسحات ضوئية ثلاثية الابعاد خاصة بتصوير وانشاء (تصميم) او موديل رقمي لاسنان المريض يمكن التعديل عليه باستخدام الكومبيوتر",
     category: "Website Design",
     sm: true,
     home: true,
+    link: "/product?filter=cleaner",
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ const portfolio_data = [
     category: "Website Design",
     sm: true,
     home: true,
+    link: "/product?filter=exocad",
   },
   // Branding Design
   {
@@ -50,6 +54,7 @@ const portfolio_data = [
     category: "Branding Design",
     big: true,
     home: true,
+    link: "/product?filter=",
   },
   {
     id: 5,
@@ -59,6 +64,7 @@ const portfolio_data = [
     category: "Branding Design",
     sm: true,
     home: true,
+    link: "/product?filter=",
   },
   {
     id: 6,
@@ -68,6 +74,7 @@ const portfolio_data = [
     category: "Branding Design",
     sm: true,
     home: true,
+    link: "/product?filter=",
   },
   // App Design
   {
@@ -78,6 +85,7 @@ const portfolio_data = [
     category: "App Design",
     big: true,
     home: true,
+    link: "/product?filter=",
   },
   {
     id: 8,
@@ -87,6 +95,7 @@ const portfolio_data = [
     category: "App Design",
     sm: true,
     home: true,
+    link: "/product?filter=",
   },
   {
     id: 9,
@@ -96,6 +105,7 @@ const portfolio_data = [
     category: "App Design",
     sm: true,
     home: true,
+    link: "/product?filter=",
   },
 
   // home three page

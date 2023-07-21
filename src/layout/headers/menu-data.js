@@ -36,23 +36,23 @@ const menu_data = [
     id: 3,
     mega_menu: false,
     title: "منتجاتنا",
-    link: "#products",
+    link: "/product",
     has_dropdown: true,
     sub_menus: [
       {
-        link: "#products",
+        link: "/product?filter=resin",
         title: "رزن شنرتك",
       },
       {
-        link: "#products",
+        link: "/product?filter=printer",
         title: "طابعات فروزن",
       },
       {
-        link: "#products",
+        link: "/product?filter=cleaner",
         title: "التراسونك كلينر",
       },
       {
-        link: "#products",
+        link: "/product?filter=exocad",
         title: "برنامج الاكزوكاد",
       },
     ],

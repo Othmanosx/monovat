@@ -80,13 +80,17 @@ const ProjectArea = () => {
                         </h3>
                         <p style={{ paddingLeft: "1rem" }}>{item.sm_text}</p>
                         <div style={{ display: "flex" }}>
-                          <a
-                            class="tp-btn-sm"
-                            style={{ marginRight: "auto", marginLeft: "2rem" }}
-                            href="#"
-                          >
-                            عرض <i class="far fa-arrow-left"></i>
-                          </a>
+                          <Link href={item.link}>
+                            <a
+                              class="tp-btn-sm"
+                              style={{
+                                marginRight: "auto",
+                                marginLeft: "2rem",
+                              }}
+                            >
+                              عرض <i class="far fa-arrow-left"></i>
+                            </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -95,13 +99,15 @@ const ProjectArea = () => {
                 <div class="row">
                   <div class="col-xl-12">
                     <div class="tp-blog-button text-center mt-30">
-                      <a class="tp-btn" href="#">
-                        جميع المنتجات
-                        <i
-                          style={{ transform: "rotateY(180deg)" }}
-                          class="fas fa-external-link-alt pe-0 me-2"
-                        ></i>
-                      </a>
+                      <Link href="/product">
+                        <a class="tp-btn">
+                          جميع المنتجات
+                          <i
+                            style={{ transform: "rotateY(180deg)" }}
+                            class="fas fa-external-link-alt pe-0 me-2"
+                          ></i>
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
