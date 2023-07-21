@@ -67,47 +67,73 @@ const ProductsItem = ({ itemsPerPage, items }) => {
   return (
     <>
       {currentItems &&
-        currentItems.map((item) => {
-          const { id, duration, delay, img, title, price, prices, rating } =
-            item;
+        currentItems.map((item, i) => {
+          const {
+            id,
+            duration,
+            delay,
+            img,
+            title,
+            price,
+            prices,
+            rating,
+            isLoading,
+          } = item;
           const isCartSelected = cart_products.find((i) => i.id === id);
           const isWishlistSelected = wishlists.find((w) => w.id === id);
           return (
             <div
               key={id}
+              onClick={() =>
+                isLoading ? null : router.push(`/product-details/${id}`)
+              }
               className="col-xl-3 col-lg-3 col-md-4 col-sm-6 wow tpfadeUp"
-              data-wow-duration={duration}
-              data-wow-delay={delay}
+              data-wow-duration=".9s"
+              data-wow-delay={`.${i + 1}s`}
             >
               <div className="tpproduct text-center mb-30">
                 <div
-                  className="tpproduct__img"
-                  style={{ borderRadius: "1rem", overflow: "hidden" }}
+                  className={`tpproduct__img ${isLoading ? "shimmerBG" : ""}`}
+                  style={{
+                    borderRadius: "1rem",
+                    overflow: "hidden",
+                  }}
                 >
-                  <img className="w-100" src={img} alt="" />
+                  {isLoading ? (
+                    <div style={{ height: 216, width: 226.8 }}></div>
+                  ) : (
+                    <img className="w-100" src={img} alt="" />
+                  )}
                   <div className="tp-product-icon">
-                    <button
-                      onClick={() => router.push(`/product-details/${id}`)}
-                    >
+                    <button>
                       <i className={"fas fa-external-link-alt"}></i>
                     </button>
                   </div>
                 </div>
                 <div className="tpproduct__meta">
-                  <h4 className="tp-product-title">
-                    <Link href={`/product-details/${id}`}>
+                  <h4
+                    className={`tp-product-title ${
+                      isLoading ? "shimmerBG" : ""
+                    }`}
+                    title={title}
+                  >
+                    <Link href={isLoading ? "" : `/product-details/${id}`}>
                       <a>{title}</a>
                     </Link>
                   </h4>
-                  <span>${prices?.[0]?.price ?? price}</span>
-                  <div className="product-rating">
-                    <Rating
-                      fullSymbol={<i className="fas fa-star"></i>}
-                      emptySymbol={<i className="fal fa-star"></i>}
-                      initialRating={rating}
-                      readonly
-                    />
-                  </div>
+                  <span className={isLoading && "shimmerBG"}>
+                    ${prices?.[0]?.price ?? price}
+                  </span>
+                  {rating && (
+                    <div className="product-rating">
+                      <Rating
+                        fullSymbol={<i className="fas fa-star"></i>}
+                        emptySymbol={<i className="fal fa-star"></i>}
+                        initialRating={rating}
+                        readonly
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

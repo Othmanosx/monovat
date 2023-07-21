@@ -1,7 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
-import React from "react"
-import { ClipPath, UpArrow } from "../../svg"
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { ClipPath, UpArrow } from "../../svg";
 
 const footer_contents = {
   title: (
@@ -26,16 +26,16 @@ const footer_contents = {
     },
     // "fab fa-youtube",
   ],
-}
+};
 
 const { btn_text, conditions, copyRight_text, logo, social_links, title } =
-  footer_contents
+  footer_contents;
 
 const Footer = () => {
   return (
     <footer className="p-relative">
       <button className="scrollTop d-none d-md-block" data-target="html">
-        <Link href={"/"}>
+        <Link href={"#"}>
           <div className="tp-backto-top">
             <UpArrow />
           </div>
@@ -145,7 +145,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

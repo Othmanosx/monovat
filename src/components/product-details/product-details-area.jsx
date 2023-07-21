@@ -22,6 +22,7 @@ const ProductDetailsArea = ({ product }) => {
     accordion_items,
     category,
     prices,
+    isLoading,
   } = product || {};
   const dispatch = useDispatch();
   const [select, setSelect] = useState(prices?.[0]?.name);
@@ -39,15 +40,21 @@ const ProductDetailsArea = ({ product }) => {
         <div className="container">
           <div className="row align-items-center justify-content-center">
             <div className="col-xl-5 col-lg-6 col-12">
-              <div className="tp-product-img">
-                <img className="w-100" src={img} alt="" />
+              <div className={`tp-product-img ${isLoading && "shimmerBG"}`}>
+                {isLoading ? (
+                  <div style={{ height: 450, width: "auto" }} />
+                ) : (
+                  <img className="w-100" src={img} alt="" />
+                )}
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 col-12">
               <div className="productdetails">
                 <div className="productdetails__content">
-                  <h3 className="pd-title">{title}</h3>
-                  <p>{sm_desc}</p>
+                  <h3 className={`pd-title ${isLoading && "shimmerBG"}`}>
+                    {title}
+                  </h3>
+                  <p className={isLoading && "shimmerBG"}>{sm_desc}</p>
                 </div>
                 <div className="productdetails__ratting">
                   {/* <Rating
@@ -60,11 +67,13 @@ const ProductDetailsArea = ({ product }) => {
                   {prices && (
                     <label for="slct">
                       <select
+                        style={{ direction: "rtl" }}
                         className="select"
                         id="slct"
                         required="required"
                         defaultValue={prices?.[0].name}
                         value={select}
+                        disabled={isLoading}
                         onChange={(e) => setSelect(e.target.value)}
                       >
                         <option value="" disabled="disabled">
@@ -79,22 +88,33 @@ const ProductDetailsArea = ({ product }) => {
                     </label>
                   )}
                   {prices ? (
-                    <h4>
+                    <h4 className={isLoading && "shimmerBG"}>
                       ${selectedPrice?.price}{" "}
                       {selectedPrice?.old_price && (
-                        <del>${selectedPrice?.old_price}</del>
+                        <del className={isLoading && "shimmerBG"}>
+                          ${selectedPrice?.old_price}
+                        </del>
                       )}
                     </h4>
                   ) : (
-                    <h4>
+                    <h4 className={isLoading && "shimmerBG"}>
                       ${price} {old_price && <del>${old_price}</del>}
                     </h4>
                   )}
                 </div>
                 {models && (
-                  <div className="productdetails__model">
-                    <h5>الالوان</h5>
-                    {models && models.map((m, i) => <a key={i}>{m}</a>)}
+                  <div
+                    className={`productdetails__model ${
+                      isLoading && "shimmerBG"
+                    }`}
+                  >
+                    <h5 className={isLoading && "shimmerBG"}>الالوان</h5>
+                    {models &&
+                      models.map((m, i) => (
+                        <a className="ms-2" key={i}>
+                          {m}
+                        </a>
+                      ))}
                   </div>
                 )}
                 <div className="productdetails__button">
@@ -104,7 +124,11 @@ const ProductDetailsArea = ({ product }) => {
                   >
                     Add to cart
                   </button> */}
-                  <button className="tp-btn-sm-sky">شراء الآن</button>
+                  <button
+                    className={`tp-btn-sm-sky ${isLoading && "shimmerBG"}`}
+                  >
+                    اطلب الآن
+                  </button>
                 </div>
               </div>
             </div>
@@ -113,46 +137,49 @@ const ProductDetailsArea = ({ product }) => {
             <div className="productdetails-tabs">
               <div className="row justify-content-center">
                 <div className="col-xl-10 col-lg-12 col-12">
-                  <div className="product-additional-tab">
-                    <div className="pro-details-nav mb-40">
-                      <ul
-                        className="nav nav-tabs pro-details-nav-btn"
-                        id="myTabs"
-                        role="tablist"
-                      >
-                        <li className="nav-item" role="presentation">
-                          <button
-                            className="nav-links active"
-                            id="home-tab-1"
-                            data-bs-toggle="tab"
-                            data-bs-target="#home-1"
-                            type="button"
-                            role="tab"
-                            aria-controls="home-1"
-                            aria-selected="true"
-                            tabIndex="-1"
-                          >
-                            <span>معلومات المنتج</span>
-                          </button>
-                        </li>
-                        {additional_info && (
-                          <li className="nav-item" role="presentation">
-                            <button
-                              className="nav-links"
-                              id="information-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#additional-information"
-                              type="button"
-                              role="tab"
-                              aria-controls="additional-information"
-                              tabIndex="-1"
-                              aria-selected="false"
-                            >
-                              <span>المواصفات</span>
-                            </button>
-                          </li>
-                        )}
-                        {/* <li className="nav-item" role="presentation">
+                  {isLoading ? null : (
+                    <div className="product-additional-tab">
+                      <div className="pro-details-nav mb-40">
+                        <ul
+                          className="nav nav-tabs pro-details-nav-btn"
+                          id="myTabs"
+                          role="tablist"
+                        >
+                          {(details_text_1 || details_text_2) && (
+                            <li className="nav-item" role="presentation">
+                              <button
+                                className="nav-links active"
+                                id="home-tab-1"
+                                data-bs-toggle="tab"
+                                data-bs-target="#home-1"
+                                type="button"
+                                role="tab"
+                                aria-controls="home-1"
+                                aria-selected="true"
+                                tabIndex="-1"
+                              >
+                                <span>معلومات المنتج</span>
+                              </button>
+                            </li>
+                          )}
+                          {additional_info && (
+                            <li className="nav-item" role="presentation">
+                              <button
+                                className="nav-links"
+                                id="information-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#additional-information"
+                                type="button"
+                                role="tab"
+                                aria-controls="additional-information"
+                                tabIndex="-1"
+                                aria-selected="false"
+                              >
+                                <span>المواصفات</span>
+                              </button>
+                            </li>
+                          )}
+                          {/* <li className="nav-item" role="presentation">
                           <button
                             className="nav-links"
                             id="reviews-tab"
@@ -167,67 +194,67 @@ const ProductDetailsArea = ({ product }) => {
                             <span>Review (08)</span>
                           </button>
                         </li> */}
-                        {accordion_items && (
-                          <li className="nav-item" role="presentation">
-                            <button
-                              className="nav-links"
-                              id="size-chart-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#chart"
-                              type="button"
-                              role="tab"
-                              aria-controls="chart"
-                              aria-selected="false"
-                              tabIndex="-1"
-                            >
-                              <span>اسئلة واجوبة</span>
-                            </button>
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-                    <div
-                      className="tab-content tp-content-tab"
-                      id="myTabContent-2"
-                    >
-                      <div
-                        className="tab-para tab-pane fade show active"
-                        id="home-1"
-                        role="tabpanel"
-                        aria-labelledby="home-tab-1"
-                      >
-                        <p className="mb-30">{details_text_1}</p>
-                        {details_text_2 && <p>{details_text_2}</p>}
+                          {accordion_items && (
+                            <li className="nav-item" role="presentation">
+                              <button
+                                className="nav-links"
+                                id="size-chart-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#chart"
+                                type="button"
+                                role="tab"
+                                aria-controls="chart"
+                                aria-selected="false"
+                                tabIndex="-1"
+                              >
+                                <span>اسئلة واجوبة</span>
+                              </button>
+                            </li>
+                          )}
+                        </ul>
                       </div>
                       <div
-                        className="tab-pane fade"
-                        id="additional-information"
-                        role="tabpanel"
-                        aria-labelledby="information-tab"
+                        className="tab-content tp-content-tab"
+                        id="myTabContent-2"
                       >
-                        <div className="product__details-info table-responsive">
-                          <table className="table table-striped">
-                            <tbody>
-                              {additional_info &&
-                                additional_info.map((info, i) => (
-                                  <tr key={i}>
-                                    <td className="add-info">{info.info}</td>
-                                    {Array.isArray(info.list) ? (
-                                      <td className="add-info-list">
-                                        {info.list.join(", ")}
-                                      </td>
-                                    ) : (
-                                      <td className="add-info-list">
-                                        {info.list}
-                                      </td>
-                                    )}
-                                  </tr>
-                                ))}
-                            </tbody>
-                          </table>
+                        <div
+                          className="tab-para tab-pane fade show active"
+                          id="home-1"
+                          role="tabpanel"
+                          aria-labelledby="home-tab-1"
+                        >
+                          <p className="mb-30">{details_text_1}</p>
+                          {details_text_2 && <p>{details_text_2}</p>}
                         </div>
-                      </div>
-                      {/* <div
+                        <div
+                          className="tab-pane fade"
+                          id="additional-information"
+                          role="tabpanel"
+                          aria-labelledby="information-tab"
+                        >
+                          <div className="product__details-info table-responsive">
+                            <table className="table table-striped">
+                              <tbody>
+                                {additional_info &&
+                                  additional_info.map((info, i) => (
+                                    <tr key={i}>
+                                      <td className="add-info">{info.info}</td>
+                                      {Array.isArray(info.list) ? (
+                                        <td className="add-info-list">
+                                          {info.list.join(", ")}
+                                        </td>
+                                      ) : (
+                                        <td className="add-info-list">
+                                          {info.list}
+                                        </td>
+                                      )}
+                                    </tr>
+                                  ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        {/* <div
                         className="tab-pane fade"
                         id="reviews"
                         role="tabpanel"
@@ -305,53 +332,56 @@ const ProductDetailsArea = ({ product }) => {
                           </div>
                         </div>
                       </div> */}
-                      <div
-                        className="tab-pane fade"
-                        id="chart"
-                        role="tabpanel"
-                        aria-labelledby="size-chart-tab"
-                      >
-                        <div className="tp-custom-accordio faq-accordio-border">
-                          <div className="accordion" id="accordionExample">
-                            {accordion_items?.map((item, i) => {
-                              const { id, show, title, desc } = item;
-                              return (
-                                <div key={id} className="accordion-items">
-                                  <h2
-                                    className="accordion-header"
-                                    id={`heading-${id}`}
-                                  >
-                                    <button
-                                      className={`accordion-buttons ${
-                                        show ? "" : "collapsed"
-                                      }`}
-                                      type="button"
-                                      data-bs-toggle="collapse"
-                                      data-bs-target={`#collapse-${id}`}
-                                      aria-expanded={show ? "true" : "false"}
-                                      aria-controls={`collapse-${id}`}
+                        <div
+                          className="tab-pane fade"
+                          id="chart"
+                          role="tabpanel"
+                          aria-labelledby="size-chart-tab"
+                        >
+                          <div className="tp-custom-accordio faq-accordio-border">
+                            <div className="accordion" id="accordionExample">
+                              {accordion_items?.map((item, i) => {
+                                const { id, show, title, desc } = item;
+                                return (
+                                  <div key={id} className="accordion-items">
+                                    <h2
+                                      className="accordion-header"
+                                      id={`heading-${id}`}
                                     >
-                                      {title}
-                                    </button>
-                                  </h2>
-                                  <div
-                                    id={`collapse-${id}`}
-                                    className={`accordion-collapse collapse ${
-                                      show ? "show" : ""
-                                    }`}
-                                    aria-labelledby={`heading-${id}`}
-                                    data-bs-parent="#accordionExample"
-                                  >
-                                    <div className="accordion-body">{desc}</div>
+                                      <button
+                                        className={`accordion-buttons ${
+                                          show ? "" : "collapsed"
+                                        }`}
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target={`#collapse-${id}`}
+                                        aria-expanded={show ? "true" : "false"}
+                                        aria-controls={`collapse-${id}`}
+                                      >
+                                        {title}
+                                      </button>
+                                    </h2>
+                                    <div
+                                      id={`collapse-${id}`}
+                                      className={`accordion-collapse collapse ${
+                                        show ? "show" : ""
+                                      }`}
+                                      aria-labelledby={`heading-${id}`}
+                                      data-bs-parent="#accordionExample"
+                                    >
+                                      <div className="accordion-body">
+                                        {desc}
+                                      </div>
+                                    </div>
                                   </div>
-                                </div>
-                              );
-                            })}
+                                );
+                              })}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -11,7 +11,7 @@ const NavMenus = () => {
           className={`${menu.has_dropdown ? "has-dropdown" : ""}
       ${menu.mega_menu ? "has-mega-menu" : ""}`}
         >
-          <Link href={menu.link}>
+          <Link href={"/" + menu.link}>
             <a>
               <h5>
                 {menu.title}{" "}
