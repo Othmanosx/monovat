@@ -127,7 +127,7 @@ const ProductDetailsArea = ({ product }) => {
                   <button
                     className={`tp-btn-sm-sky ${isLoading && "shimmerBG"}`}
                   >
-                    <a href="https://wa.me/07507881482"> اطلب الآن</a>
+                    <a href="https://wa.me/+9647507881482"> اطلب الآن</a>
                   </button>
                 </div>
               </div>
